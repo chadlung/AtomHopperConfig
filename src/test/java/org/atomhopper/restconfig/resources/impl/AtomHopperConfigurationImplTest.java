@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
 
 public class AtomHopperConfigurationImplTest {
     
-    private static final Logger LOG = LoggerFactory.getLogger(AtomHopperConfigurationImpl.class);
+    private static final Logger LOG = LoggerFactory.getLogger(AtomHopperConfigurationImplTest.class);
     
     public AtomHopperConfigurationImplTest() {
     }

@@ -5,12 +5,13 @@ import java.io.FileOutputStream;
 
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
-
 import javax.ws.rs.core.Response.Status;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+
 import org.atomhopper.restconfig.jaxb.generated.Configuration;
 import org.atomhopper.restconfig.jaxb.generated.ObjectFactory;
 import org.atomhopper.restconfig.resources.AtomHopperConfiguration;
