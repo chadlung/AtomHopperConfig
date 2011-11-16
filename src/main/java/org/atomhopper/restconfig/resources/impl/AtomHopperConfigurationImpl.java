@@ -1,5 +1,6 @@
 package org.atomhopper.restconfig.resources.impl;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
@@ -48,6 +49,16 @@ public class AtomHopperConfigurationImpl implements AtomHopperConfiguration {
         } catch (JAXBException e) {
             LOG.error("Failed to parse incoming xml: " + e.getMessage());
             return Response.status (Status.fromStatusCode(422)).build();
+        } catch (FileNotFoundException e) {
+            LOG.error("Error: " + e.getMessage());
+            return Response.status(Status.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @Override
+    public Response retrieveConfiguration() {
+        try {
+            return Response.ok(new FileInputStream(ATOM_HOPPER_CONFIG_FILE_PATH + ATOM_HOPPER_CONFIG_FILE_NAME)).build();
         } catch (FileNotFoundException e) {
             LOG.error("Error: " + e.getMessage());
             return Response.status(Status.INTERNAL_SERVER_ERROR).build();
