@@ -43,8 +43,8 @@ public class AtomHopperConfigurationImplTest {
      * Test of modifyConfiguration method, of class AtomHopperConfigurationImpl.
      */
     @Test
-    public void shouldReturnCreatedHTTP201() throws JAXBException {
-        LOG.info("Testing shouldReturnCreatedHTTP201");
+    public void shouldReturnCreatedHTTP204() throws JAXBException {
+        LOG.info("Testing shouldReturnCreatedHTTP204");
         
         ObjectFactory factory = new ObjectFactory();
         
@@ -82,7 +82,7 @@ public class AtomHopperConfigurationImplTest {
         AtomHopperConfigurationImpl instance = new AtomHopperConfigurationImpl();
         Response result = instance.modifyConfiguration(config);
         
-        assertEquals(HttpServletResponse.SC_CREATED, result.getStatus());
+        assertEquals(HttpServletResponse.SC_NO_CONTENT, result.getStatus());
     }
     
     @Test
