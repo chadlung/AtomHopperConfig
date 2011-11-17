@@ -41,7 +41,7 @@ public class AtomHopperConfigurationImpl implements AtomHopperConfiguration {
         
                 LOG.info("Sucessfully updated the " + ATOM_HOPPER_CONFIG_FILE_NAME + " file");
                 
-                return Response.status(Response.Status.NO_CONTENT).build();
+                return Response.status(Response.Status.CREATED).build();
             } else {
                 return Response.status(Response.Status.PRECONDITION_FAILED).build();
             }
