@@ -21,7 +21,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-@Path("/configuration")
+@Path("/v1/configuration")
 public class AtomHopperConfigurationImpl implements AtomHopperConfiguration {
 
     private static final String ATOM_HOPPER_CONFIG_FILE_NAME = "atom-server.cfg.xml";
